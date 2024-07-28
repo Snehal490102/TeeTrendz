@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>T-Shirt Ordering Form</title>
+</head>
+<body>
+    <h1>TeeTrendz</h1>
+    <form action="/submit-order" method="post">
+       
+            <h2><u>Shirt Details</h2></u>
+            <p>
+                <label for="tagline">Tagline on the Shirt:</label>
+                <input
+                    type="text"
+                    
+                    name="tagline"
+                    required
+                    placeholder="Enter the tagline"
+                />
+            </p>
+
+             <p>
+                <label for="quantity">Quantity:</label>
+                <input
+                    type="number"
+                    
+                    name="quantity"
+                    min="1"
+                    required
+                    placeholder="Enter quantity"
+                />
+            </p>
+            <p>
+                <label for="size">Size:</label>
+                <select  name="size" required>
+                    <option value="">Select a size</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="xlarge">X-Large</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="color">Color:</label>
+                <select  name="color" required>
+                    <option value="">Select a color</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                </select>
+            </p>
+            <p>
+                <label for="delivery-date">Delivery Date:</label>
+                <input type="date"  required />
+            </p>
+        <h2><u>Delivery Information</h2></u>
+             <p>
+                <label for="name">Recipient's Name:</label>
+                <input
+                    type="text"
+                     name="name"
+                    required
+                    placeholder="Enter recipient's name"
+                />
+            </p>
+            <p>
+                <label for="email">Email:</label>
+                <input
+                    type="email"
+                    name="email"
+                    required
+                    placeholder="Enter email address"
+                />
+            </p>
+            <p>
+                <label for="phone">Phone Number:</label>
+                <input
+                    type="tel"
+                    name="phone"
+                    required
+                    placeholder="Enter phone number"
+                />
+            </p>
+
+            <p>
+                <label for="address">Address:</label>
+                <input
+                    type="text"
+                    
+                    name="address"
+                    required
+                    placeholder="Enter delivery address"
+                />
+            </p>
+       <p>
+            <label for="comments">Additional Comments:</label>
+            <textarea
+               
+                name="comments"
+                rows="4"
+                placeholder="Enter any additional comments or special instructions"
+            ></textarea>
+        </p>
+    <p>
+            <button type="submit">Submit Order</button>
+            <button type="reset">Reset Form</button>
+        </p>
+    </form>
+</body>
+</html>
