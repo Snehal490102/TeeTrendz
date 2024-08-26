@@ -7,12 +7,13 @@
 </head>
 <body>
     <h1>TeeTrendz</h1>
-    <form action="/submit-order" method="post">
+    <form action="/submit-order" method="post" id="order-form">
         
         <section>
             <h2>Shirt Details</h2>
             <fieldset>
                 <legend>Shirt Information</legend>
+                
                 <p>
                     <label for="tagline">Tagline on the Shirt:</label>
                     <input
@@ -35,6 +36,7 @@
                         placeholder="Enter quantity"
                     />
                 </p>
+                
                 <p>
                     <label for="size">Size:</label>
                     <select name="size" id="size" required>
@@ -55,10 +57,49 @@
                         <option value="green">Green</option>
                     </select>
                 </p>
+                
                 <p>
                     <label for="delivery-date">Delivery Date:</label>
                     <input type="date" id="delivery-date" name="delivery-date" required />
                 </p>
+
+                <!-- Unique HTML5 Elements -->
+
+                <!-- <progress> tag to show progress -->
+                <p>
+                    <label for="progress">Order Processing Progress:</label>
+                    <progress id="progress" value="30" max="100"></progress>
+                    <output for="progress" id="progress-output">30%</output>
+                </p>
+
+                <!-- <datalist> tag to provide predefined options -->
+                <p>
+                    <label for="special-instructions">Special Instructions:</label>
+                    <input 
+                        type="text" 
+                        id="special-instructions" 
+                        name="special-instructions" 
+                        list="instructions-options" 
+                        placeholder="Choose or enter instructions" 
+                    />
+                    <datalist id="instructions-options">
+                        <option value="Add gift wrap">
+                        <option value="Include a personalized note">
+                        <option value="Express shipping">
+                    </datalist>
+                </p>
+
+                <!-- <details> and <summary> tags for expandable content -->
+                <p>
+                    <details>
+                        <summary>Additional Information</summary>
+                        <p>
+                            Please provide any extra details or special instructions for your order here. 
+                            This could include specific requests or preferences for your t-shirt design.
+                        </p>
+                    </details>
+                </p>
+
             </fieldset>
         </section>
         
@@ -66,6 +107,7 @@
             <h2>Delivery Information</h2>
             <fieldset>
                 <legend>Recipient Details</legend>
+                
                 <p>
                     <label for="name">Recipient's Name:</label>
                     <input
