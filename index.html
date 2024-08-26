@@ -8,106 +8,127 @@
 <body>
     <h1>TeeTrendz</h1>
     <form action="/submit-order" method="post">
-       
-            <h2><u>Shirt Details</h2></u>
-            <p>
-                <label for="tagline">Tagline on the Shirt:</label>
-                <input
-                    type="text"
-                    
-                    name="tagline"
-                    required
-                    placeholder="Enter the tagline"
-                />
-            </p>
+        
+        <section>
+            <h2>Shirt Details</h2>
+            <fieldset>
+                <legend>Shirt Information</legend>
+                <p>
+                    <label for="tagline">Tagline on the Shirt:</label>
+                    <input
+                        type="text"
+                        name="tagline"
+                        id="tagline"
+                        required
+                        placeholder="Enter the tagline"
+                    />
+                </p>
 
-             <p>
-                <label for="quantity">Quantity:</label>
-                <input
-                    type="number"
-                    
-                    name="quantity"
-                    min="1"
-                    required
-                    placeholder="Enter quantity"
-                />
-            </p>
-            <p>
-                <label for="size">Size:</label>
-                <select  name="size" required>
-                    <option value="">Select a size</option>
-                    <option value="small">Small</option>
-                    <option value="medium">Medium</option>
-                    <option value="large">Large</option>
-                    <option value="xlarge">X-Large</option>
-                </select>
-            </p>
+                <p>
+                    <label for="quantity">Quantity:</label>
+                    <input
+                        type="number"
+                        name="quantity"
+                        id="quantity"
+                        min="1"
+                        required
+                        placeholder="Enter quantity"
+                    />
+                </p>
+                <p>
+                    <label for="size">Size:</label>
+                    <select name="size" id="size" required>
+                        <option value="">Select a size</option>
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                        <option value="xlarge">X-Large</option>
+                    </select>
+                </p>
 
-            <p>
-                <label for="color">Color:</label>
-                <select  name="color" required>
-                    <option value="">Select a color</option>
-                    <option value="red">Red</option>
-                    <option value="blue">Blue</option>
-                    <option value="green">Green</option>
-                </select>
-            </p>
-            <p>
-                <label for="delivery-date">Delivery Date:</label>
-                <input type="date"  required />
-            </p>
-        <h2><u>Delivery Information</h2></u>
-             <p>
-                <label for="name">Recipient's Name:</label>
-                <input
-                    type="text"
-                     name="name"
-                    required
-                    placeholder="Enter recipient's name"
-                />
-            </p>
-            <p>
-                <label for="email">Email:</label>
-                <input
-                    type="email"
-                    name="email"
-                    required
-                    placeholder="Enter email address"
-                />
-            </p>
-            <p>
-                <label for="phone">Phone Number:</label>
-                <input
-                    type="tel"
-                    name="phone"
-                    required
-                    placeholder="Enter phone number"
-                />
-            </p>
+                <p>
+                    <label for="color">Color:</label>
+                    <select name="color" id="color" required>
+                        <option value="">Select a color</option>
+                        <option value="red">Red</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="delivery-date">Delivery Date:</label>
+                    <input type="date" id="delivery-date" name="delivery-date" required />
+                </p>
+            </fieldset>
+        </section>
+        
+        <section>
+            <h2>Delivery Information</h2>
+            <fieldset>
+                <legend>Recipient Details</legend>
+                <p>
+                    <label for="name">Recipient's Name:</label>
+                    <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        required
+                        placeholder="Enter recipient's name"
+                    />
+                </p>
+                <p>
+                    <label for="email">Email:</label>
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        required
+                        placeholder="Enter email address"
+                    />
+                </p>
+                <p>
+                    <label for="phone">Phone Number:</label>
+                    <input
+                        type="tel"
+                        name="phone"
+                        id="phone"
+                        required
+                        placeholder="Enter phone number"
+                    />
+                </p>
 
+                <p>
+                    <label for="address">Address:</label>
+                    <input
+                        type="text"
+                        name="address"
+                        id="address"
+                        required
+                        placeholder="Enter delivery address"
+                    />
+                </p>
+            </fieldset>
+        </section>
+
+        <section>
+            <h2>Additional Information</h2>
             <p>
-                <label for="address">Address:</label>
-                <input
-                    type="text"
-                    
-                    name="address"
-                    required
-                    placeholder="Enter delivery address"
-                />
+                <label for="comments">Additional Comments:</label>
+                <textarea
+                    name="comments"
+                    id="comments"
+                    rows="4"
+                    placeholder="Enter any additional comments or special instructions"
+                ></textarea>
             </p>
-       <p>
-            <label for="comments">Additional Comments:</label>
-            <textarea
-               
-                name="comments"
-                rows="4"
-                placeholder="Enter any additional comments or special instructions"
-            ></textarea>
-        </p>
-    <p>
-            <button type="submit">Submit Order</button>
-            <button type="reset">Reset Form</button>
-        </p>
+        </section>
+
+        <section>
+            <p>
+                <button type="submit">Submit Order</button>
+                <button type="reset">Reset Form</button>
+            </p>
+        </section>
     </form>
 </body>
 </html>
